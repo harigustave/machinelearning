@@ -21,7 +21,7 @@ data = data[["G1", "G2", "G3", "studytime", "failures", "absences"]]
 predict = "G3"
 
 # Array of training data without the label(G3)  === attributes
-X = np.array(data.drop([predict], 1))
+X = np.array(data.drop([predict], axis=1))
 
 # Array of output from array of training data === labels to predict
 Y = np.array(data[predict])
